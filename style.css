@@ -2,13 +2,19 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jersey 10', sans-serif; /* ZONA 2 Y 3: TEXTO GENERAL */
     background-image: url("fondo-sofi.jpg"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
     text-align: center;
+}
+
+/* ZONA 1: CONFIGURACIÓN PARA TODOS LOS TÍTULOS */
+h1, h2, h3, h4, .titulo-galeria {
+    font-family: 'Bayon', sans-serif;
+    font-weight: normal; 
 }
 
 /* --- ESTILOS DEL LOGIN --- */
@@ -36,7 +42,8 @@ body {
     margin: 10px 0;
     border-radius: 8px;
     border: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jersey 10', sans-serif;
+    font-size: 1.1em;
 }
 .error {
     color: #ff69b4;
@@ -56,16 +63,18 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Se ajustó un poquito por la nueva fuente */
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 15px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 .imagen-destacada {
@@ -93,11 +102,11 @@ h2 {
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 1.1em;
+    font-size: 1.3em; /* Aumentado ligeramente para Jersey 10 */
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jersey 10', sans-serif;
     width: 100%;
 }
 .boton-estandar:hover {
@@ -128,6 +137,7 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     padding: 5px 15px;
+    font-family: 'Jersey 10', sans-serif;
 }
 .btn-nav:hover { background: rgba(255, 255, 255, 0.4); }
 #dias-semana {
@@ -138,6 +148,7 @@ h2 {
     background: rgba(0, 0, 0, 0.3);
     padding: 8px 0;
     border-radius: 5px;
+    font-size: 1.1em;
 }
 .grid {
     display: grid;
@@ -151,10 +162,11 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 1.2em;
 }
 .dia:hover { background: rgba(255, 255, 255, 0.3); }
 
-/* CORRECCIÓN 1: DISEÑO RESALTADO PARA EL DÍA ACTUAL (HOY) */
+/* DISEÑO RESALTADO PARA EL DÍA ACTUAL (HOY) */
 .dia-actual {
     border: 2px solid #00ffff !important; 
     box-shadow: 0 0 12px #00ffff !important;
@@ -193,8 +205,8 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .evento-info { text-align: left; }
-.evento-info h4 { margin: 0; color: #ffb6c1; font-size: 1.1em; }
-.evento-info p { margin: 5px 0 0 0; font-size: 1em; color: #fff; }
+.evento-info h4 { margin: 0; color: #ffb6c1; font-size: 1.3em; font-family: 'Bayon', sans-serif; letter-spacing: 1px; }
+.evento-info p { margin: 5px 0 0 0; font-size: 1.1em; color: #fff; }
 .btn-eliminar-card {
     background: none;
     border: none;
@@ -237,7 +249,7 @@ h2 {
 }
 textarea {
     width: 90%; height: 80px; margin: 15px 0; padding: 10px;
-    border-radius: 5px; border: none; font-family: 'Poppins', sans-serif;
+    border-radius: 5px; border: none; font-family: 'Jersey 10', sans-serif; font-size: 1.1em;
 }
 .modal-botones {
     display: flex; justify-content: center; gap: 10px;
@@ -249,6 +261,7 @@ textarea {
 .titulo-galeria {
     color: #ffb6c1;
     margin-bottom: 5px;
+    font-size: 2em;
 }
 .grid-cartitas {
     display: grid;
@@ -280,6 +293,7 @@ textarea {
 }
 .carta-titulo {
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 1.1em;
     font-weight: bold;
+    font-family: 'Bayon', sans-serif;
 }
