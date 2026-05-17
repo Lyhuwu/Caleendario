@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Rincón Mágico</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Jersey+10&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
 </head>
@@ -40,9 +42,9 @@
             <button id="btn-whatsapp" class="boton-estandar boton-wa">🤖 Activar Alertas Mágicas</button>
             
             <div id="calendario-header">
-                <button id="btn-mes-anterior" class="btn-nav">&lt;</button>
+                <button id="btn-mes-anterior" class="btn-nav"><</button>
                 <h3 id="mes-anio"></h3>
-                <button id="btn-mes-siguiente" class="btn-nav">&gt;</button>
+                <button id="btn-mes-siguiente" class="btn-nav">></button>
             </div>
             
             <div id="dias-semana">
@@ -57,7 +59,7 @@
 
     <div id="modal-cartitas" class="modal oculto">
         <div class="modal-contenido modal-largo">
-            <span id="cerrar-cartitas" class="cerrar">&times;</span>
+            <span id="cerrar-cartitas" class="cerrar">×</span>
             <h3 class="titulo-galeria">Nuestras Cartitas 💌</h3>
             <p>Un viaje por nuestra historia...</p>
             
@@ -76,7 +78,7 @@
 
     <div id="modal-evento" class="modal oculto">
         <div class="modal-contenido">
-            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <span id="cerrar-modal" class="cerrar">×</span>
             <h3 id="titulo-modal">Detalles del Día</h3>
             <p id="fecha-seleccionada-texto"></p>
             <textarea id="texto-evento" placeholder="Escribe aquí nuestro recuerdo o evento mágico..."></textarea>
