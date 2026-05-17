@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Jersey 10', sans-serif; /* ZONA 2 Y 3: TEXTO GENERAL */
+    font-family: 'Jersey 10', sans-serif; /* APLICADO A TODO EL CUERPO */
     background-image: url("fondo-sofi.jpg"); 
     background-size: cover;
     background-position: center;
@@ -11,9 +11,9 @@ body {
     text-align: center;
 }
 
-/* ZONA 1: CONFIGURACIÓN PARA TODOS LOS TÍTULOS */
+/* TODOS LOS TÍTULOS USAN TAMBIÉN JERSEY 10 */
 h1, h2, h3, h4, .titulo-galeria {
-    font-family: 'Bayon', sans-serif;
+    font-family: 'Jersey 10', sans-serif;
     font-weight: normal; 
 }
 
@@ -43,11 +43,11 @@ h1, h2, h3, h4, .titulo-galeria {
     border-radius: 8px;
     border: none;
     font-family: 'Jersey 10', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 .error {
     color: #ff69b4;
-    font-size: 0.9em;
+    font-size: 1.1em;
     margin-top: 15px;
 }
 
@@ -63,18 +63,17 @@ h1, h2, h3, h4, .titulo-galeria {
 }
 
 h1 {
-    font-size: 3em; /* Se ajustó un poquito por la nueva fuente */
-    margin-bottom: 10px;
+    font-size: 3.5em; 
+    margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 15px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
-    letter-spacing: 1px;
 }
 
 .imagen-destacada {
@@ -102,7 +101,7 @@ h2 {
     color: white;
     border: none;
     padding: 12px 20px;
-    font-size: 1.3em; /* Aumentado ligeramente para Jersey 10 */
+    font-size: 1.4em; 
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -133,7 +132,7 @@ h2 {
     background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.6em;
     cursor: pointer;
     border-radius: 5px;
     padding: 5px 15px;
@@ -148,7 +147,7 @@ h2 {
     background: rgba(0, 0, 0, 0.3);
     padding: 8px 0;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .grid {
     display: grid;
@@ -162,7 +161,7 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 .dia:hover { background: rgba(255, 255, 255, 0.3); }
 
@@ -205,8 +204,8 @@ h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .evento-info { text-align: left; }
-.evento-info h4 { margin: 0; color: #ffb6c1; font-size: 1.3em; font-family: 'Bayon', sans-serif; letter-spacing: 1px; }
-.evento-info p { margin: 5px 0 0 0; font-size: 1.1em; color: #fff; }
+.evento-info h4 { margin: 0; color: #ffb6c1; font-size: 1.5em; font-family: 'Jersey 10', sans-serif; }
+.evento-info p { margin: 5px 0 0 0; font-size: 1.3em; color: #fff; }
 .btn-eliminar-card {
     background: none;
     border: none;
@@ -249,7 +248,7 @@ h2 {
 }
 textarea {
     width: 90%; height: 80px; margin: 15px 0; padding: 10px;
-    border-radius: 5px; border: none; font-family: 'Jersey 10', sans-serif; font-size: 1.1em;
+    border-radius: 5px; border: none; font-family: 'Jersey 10', sans-serif; font-size: 1.2em;
 }
 .modal-botones {
     display: flex; justify-content: center; gap: 10px;
@@ -261,7 +260,7 @@ textarea {
 .titulo-galeria {
     color: #ffb6c1;
     margin-bottom: 5px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 .grid-cartitas {
     display: grid;
@@ -293,7 +292,7 @@ textarea {
 }
 .carta-titulo {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: bold;
-    font-family: 'Bayon', sans-serif;
+    font-family: 'Jersey 10', sans-serif;
 }
