@@ -66,7 +66,7 @@ document.getElementById("btn-datos").addEventListener("click", () => {
     window.open("https://kinopio.club/", "_blank");
 });
 
-// CORRECCIÓN 2: BOTÓN DE WHATSAPP CONECTADO DIRECTAMENTE AL NÚMERO DE TU BOT
+// BOTÓN DE WHATSAPP CONECTADO DIRECTAMENTE AL NÚMERO DE TU BOT
 document.getElementById('btn-whatsapp').addEventListener('click', () => {
     const mensajeBot = encodeURIComponent("¡Hola! Quiero activar las alertas mágicas de nuestro rincón");
     window.location.href = `https://wa.me/527474194741?text=${mensajeBot}`; 
