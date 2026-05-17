@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Rincón Mágico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div id="pantalla-login" class="login-container">
+        <div class="login-box">
+            <h2>Acceso Privado 🔒</h2>
+            <p>Inicia sesión para entrar a nuestro rincón.</p>
+            <input type="text" id="login-user" placeholder="Usuario">
+            <input type="password" id="login-pass" placeholder="Contraseña">
+            <button id="btn-login" class="boton-estandar">Entrar</button>
+            <p id="login-error" class="error oculto">Datos incorrectos. Intenta de nuevo. ✨</p>
+        </div>
+    </div>
+
+    <div class="contenedor-principal oculto" id="app-principal">
+        <header>
+            <h1 id="titulo-bienvenida">Para Sofi 💙💜</h1>
+        </header>
+        
+        <div class="imagen-destacada"></div>
+
+        <section class="menu-opciones">
+            <button id="btn-cartitas" class="boton-estandar">💌 Nuestras Cartitas</button>
+            <button id="btn-musica" class="boton-estandar">🎵 Nuestra Playlist</button>
+            <button id="btn-datos" class="boton-estandar">🧠 Datos Curiosos</button>
+        </section>
+
+        <section class="seccion-calendario">
+            <h2>Nuestro Almanaque</h2>
+            
+            <button id="btn-whatsapp" class="boton-estandar boton-wa">🤖 Activar Alertas Mágicas</button>
+            
+            <div id="calendario-header">
+                <button id="btn-mes-anterior" class="btn-nav">&lt;</button>
+                <h3 id="mes-anio"></h3>
+                <button id="btn-mes-siguiente" class="btn-nav">&gt;</button>
+            </div>
+            
+            <div id="dias-semana">
+                <span>Dom</span><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span>
+            </div>
+            
+            <div id="calendario-grid" class="grid"></div>
+            
+            <div id="lista-eventos"></div>
+        </section>
+    </div>
+
+    <div id="modal-cartitas" class="modal oculto">
+        <div class="modal-contenido modal-largo">
+            <span id="cerrar-cartitas" class="cerrar">&times;</span>
+            <h3 class="titulo-galeria">Nuestras Cartitas 💌</h3>
+            <p>Un viaje por nuestra historia...</p>
+            
+            <div class="grid-cartitas">
+                <a href="URL_DE_TU_PDF_O_GITHUB_AQUI" target="_blank" class="carta-card">
+                    <img src="portada1.jpg" alt="Portada 1" class="carta-img">
+                    <div class="carta-titulo">Mes 1: El comienzo</div>
+                </a>
+                <a href="URL_DE_TU_OTRO_PDF_O_GITHUB" target="_blank" class="carta-card">
+                    <img src="portada2.jpg" alt="Portada 2" class="carta-img">
+                    <div class="carta-titulo">San Valentín 💖</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-evento" class="modal oculto">
+        <div class="modal-contenido">
+            <span id="cerrar-modal" class="cerrar">&times;</span>
+            <h3 id="titulo-modal">Detalles del Día</h3>
+            <p id="fecha-seleccionada-texto"></p>
+            <textarea id="texto-evento" placeholder="Escribe aquí nuestro recuerdo o evento mágico..."></textarea>
+            <div class="modal-botones">
+                <button id="btn-guardar-evento" class="boton-estandar">Guardar</button>
+                <button id="btn-eliminar-evento" class="boton-estandar btn-rojo oculto">Borrar Evento</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

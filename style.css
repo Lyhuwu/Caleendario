@@ -1,0 +1,285 @@
+/* Configuraciones generales y fondo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("fondo-sofi.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+/* --- ESTILOS DEL LOGIN --- */
+.login-container {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+.login-box {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    width: 85%; 
+    max-width: 350px;
+}
+.login-box input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+.error {
+    color: #ff69b4;
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+.oculto { display: none !important; }
+
+.contenedor-principal {
+    background-color: rgba(0, 0, 0, 0.6); 
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.imagen-destacada {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    background-image: url("pinguinos.gif"); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* --- MENÚ DE OPCIONES --- */
+.menu-opciones {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.boton-estandar {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+.boton-estandar:hover {
+    background-color: #483d8b;
+    transform: scale(1.03);
+}
+
+.boton-wa {
+    background-color: #25D366;
+    margin-bottom: 15px;
+}
+.boton-wa:hover {
+    background-color: #128C7E;
+}
+
+/* --- CALENDARIO --- */
+#calendario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.btn-nav {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+.btn-nav:hover { background: rgba(255, 255, 255, 0.4); }
+#dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 0;
+    border-radius: 5px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+.dia {
+    padding: 15px 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.dia:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* CORRECCIÓN 1: DISEÑO RESALTADO PARA EL DÍA ACTUAL (HOY) */
+.dia-actual {
+    border: 2px solid #00ffff !important; 
+    box-shadow: 0 0 12px #00ffff !important;
+    font-weight: bold !important;
+}
+
+.dia-con-evento {
+    background: #ff69b4;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* --- LISTA DE EVENTOS --- */
+#lista-eventos {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.evento-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #ff69b4;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+.evento-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.evento-info { text-align: left; }
+.evento-info h4 { margin: 0; color: #ffb6c1; font-size: 1.1em; }
+.evento-info p { margin: 5px 0 0 0; font-size: 1em; color: #fff; }
+.btn-eliminar-card {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-eliminar-card:hover { transform: scale(1.2); }
+
+/* --- MODALES --- */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-contenido {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.modal-largo {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.cerrar {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+textarea {
+    width: 90%; height: 80px; margin: 15px 0; padding: 10px;
+    border-radius: 5px; border: none; font-family: 'Poppins', sans-serif;
+}
+.modal-botones {
+    display: flex; justify-content: center; gap: 10px;
+}
+.btn-rojo { background-color: #ff4c4c; }
+.btn-rojo:hover { background-color: #cc0000; }
+
+/* --- GALERÍA DE CARTITAS --- */
+.titulo-galeria {
+    color: #ffb6c1;
+    margin-bottom: 5px;
+}
+.grid-cartitas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.carta-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.carta-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff69b4;
+}
+.carta-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background-color: rgba(0,0,0,0.5);
+}
+.carta-titulo {
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
