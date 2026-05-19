@@ -59,7 +59,7 @@ document.getElementById("cerrar-cartitas").addEventListener("click", () => {
 });
 
 document.getElementById("btn-musica").addEventListener("click", () => {
-    window.open("https://open.spotify.com/", "_blank");
+    window.open("https://youtube.com/playlist?list=PL8XJYWxEU8h_jWxafxQFIONg-dv_-myyv&si=a38rq2kl3QGOnS4x ", "_blank");
 });
 
 document.getElementById("btn-datos").addEventListener("click", () => {
