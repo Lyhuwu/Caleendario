@@ -63,7 +63,7 @@ document.getElementById("btn-musica").addEventListener("click", () => {
 });
 
 document.getElementById("btn-datos").addEventListener("click", () => {
-    window.open("https://kinopio.club/", "_blank");
+    window.open("https://lyhuwu.github.io/Datos/", "_blank");
 });
 
 // BOTÓN DE WHATSAPP CONECTADO DIRECTAMENTE AL NÚMERO DE TU BOT
