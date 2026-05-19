@@ -123,7 +123,7 @@ db.collection("eventosSofi").orderBy("fecha", "asc").onSnapshot((snapshot) => {
         listaEventos.appendChild(divCard);
 
         if (data.fecha === hoyStr && !data.avisado) {
-            enviarAlertaMagica(`¿Estas prepada? ¡Hoy hay algo agendado! ${data.texto}`);
+            enviarAlertaMagica(`¿Estas prepada? Hoy tienes agendado: ${data.texto}`);
             db.collection("eventosSofi").doc(doc.id).update({ avisado: true });
         }
     });
@@ -201,7 +201,7 @@ btnGuardarEvento.addEventListener("click", () => {
         db.collection("eventosSofi").add(datosEvento).then(() => {
             const hoyStr = new Date().toISOString().split('T')[0];
             if (fechaEnFoco === hoyStr) {
-                enviarAlertaMagica(`¡Atención, atención! Tienes un evento hoy: ${texto}`);
+                enviarAlertaMagica(`¡Atención, atención! Tienes un evento para hoy mismo: ${texto}`);
             }
             modalEvento.classList.add("oculto");
         });
