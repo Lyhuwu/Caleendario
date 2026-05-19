@@ -201,7 +201,7 @@ btnGuardarEvento.addEventListener("click", () => {
         db.collection("eventosSofi").add(datosEvento).then(() => {
             const hoyStr = new Date().toISOString().split('T')[0];
             if (fechaEnFoco === hoyStr) {
-                enviarAlertaMagica(`¡Se guardó un evento para hoy! 💙💜 ${texto}`);
+                enviarAlertaMagica(`¡Atención, atención! Tienes un evento hoy: ${texto}`);
             }
             modalEvento.classList.add("oculto");
         });
