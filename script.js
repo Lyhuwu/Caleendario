@@ -209,7 +209,7 @@ btnGuardarEvento.addEventListener("click", () => {
 });
 
 btnEliminarEvento.addEventListener("click", () => {
-    if (confirm("¿Segura que quieres borrar este recuerdo?")) {
+    if (confirm("¿Segura que quieres borrar este evento?")) {
         db.collection("eventosSofi").doc(idEventoEnFoco).delete().then(() => modalEvento.classList.add("oculto"));
     }
 });
