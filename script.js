@@ -68,7 +68,7 @@ document.getElementById("btn-datos").addEventListener("click", () => {
 
 // BOTÓN DE WHATSAPP CONECTADO DIRECTAMENTE AL NÚMERO DE TU BOT
 document.getElementById('btn-whatsapp').addEventListener('click', () => {
-    const mensajeBot = encodeURIComponent("¡Hola! Quiero activar las alertas mágicas de nuestro rincón");
+    const mensajeBot = encodeURIComponent("¡Hola! Quiero activar las alertas para próximos eventos");
     window.location.href = `https://wa.me/527474194741?text=${mensajeBot}`; 
 });
 
@@ -115,7 +115,7 @@ db.collection("eventosSofi").orderBy("fecha", "asc").onSnapshot((snapshot) => {
 
         divCard.querySelector('.btn-eliminar-card').addEventListener('click', (e) => {
             e.stopPropagation();
-            if(confirm("¿Segura que quieres borrar este recuerdo?")) {
+            if(confirm("¿Segura que quieres borrar este evento?")) {
                 db.collection("eventosSofi").doc(doc.id).delete();
             }
         });
@@ -123,7 +123,7 @@ db.collection("eventosSofi").orderBy("fecha", "asc").onSnapshot((snapshot) => {
         listaEventos.appendChild(divCard);
 
         if (data.fecha === hoyStr && !data.avisado) {
-            enviarAlertaMagica(`¡Hoy es un día especial en nuestro rincón! 💙💜 ${data.texto}`);
+            enviarAlertaMagica(`¿Estas prepada? ¡Hoy hay algo agendado! ${data.texto}`);
             db.collection("eventosSofi").doc(doc.id).update({ avisado: true });
         }
     });
